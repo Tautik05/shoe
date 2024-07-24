@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/product.css' %}" />
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="{{ sneaker.shoe_image.url }}"
+        alt="{{ shoe.shoe_name }}"
+        class="ProductPic"
+      />
+      <div class="product">
+        <h1 class="productTitle">{{sneaker.shoe_name}}</h1>
+        <h3 class="productprize">{{sneaker.shoe_price}}</h3>
+        <p class="productDescription">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
+          quae soluta, quaerat hic totam sunt quia recusandae saepe
+          reprehenderit, animi voluptates perspiciatis, esse laborum excepturi.
+        </p>
+        <div class="ProductColor">
+          <div class="color"></div>
+          <div class="color"></div>
+          <!-- <div class="color"></div> -->
+        </div>
+        <div class="productSize">
+          <div class="size">42</div>
+          <div class="size">43</div>
+          <div class="size">44</div>
+        </div>
+        <button class="productButton"><a href="/cart/">Add to Cart!</a></button>
+        <div class="counter">
+          <button class="decrement">-</button>
+          <span class="count">0</span>
+          <button class="increment">+</button>
+          <script>
+            const decrementButton = document.querySelector(".decrement");
+            const incrementButton = document.querySelector(".increment");
+            const countElement = document.querySelector(".count");
+
+            let count = 0;
+
+            decrementButton.addEventListener("click", () => {
+              if (count > 0) {
+                count--;
+                countElement.textContent = count;
+              }
+            });
+
+            incrementButton.addEventListener("click", () => {
+              count++;
+              countElement.textContent = count;
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

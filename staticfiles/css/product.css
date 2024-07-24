@@ -1,0 +1,126 @@
+.body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  /* position: relative; */
+  background-color: rgb(239, 233, 233);
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 67%);
+}
+.ProductPic {
+  height: 80vh;
+  width: 80vh;
+}
+.product {
+  position: relative;
+  top: 7%;
+  left: 3%;
+  right: 13%;
+  width: 40%;
+}
+.productTitle {
+  font-size: 75px;
+  font-weight: 900px;
+}
+.productDescription {
+  font-style: 24px;
+  color: black;
+}
+.ProductColor,
+.productSize {
+  display: flex;
+}
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: black;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+/* .ProductColor .color:last-child {
+    background-color: darkblue;
+  } */
+.color:last-child {
+  background-color: darkblue;
+}
+.size {
+  padding: 3px 20px;
+  width: 35px;
+  height: 32px;
+  background-color: whitesmoke;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  align-content: center;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid purple;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.productButton {
+  /* display: inline-block; */
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.productButton:hover {
+  background-color: white;
+  color: black;
+}
+
+/* .productButton:active {
+    background-color: #990000;
+  } */
+.counter {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.counter button {
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: #080808;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* .counter button:hover {
+    background-color: green;
+  } */
+
+/* .counter button:active {
+    background-color: #990000;
+  } */
+
+.counter .count {
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.productprize {
+  font-size: 30px;
+  font-weight: bold;
+  color: green;
+  margin-top: 10px;
+}

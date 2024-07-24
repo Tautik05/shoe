@@ -1,0 +1,159 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+nav {
+  color: white;
+  background-color: #111;
+  padding: 20px 50px;
+}
+.navtop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search {
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.searchInput {
+  border: none;
+  background-color: transparent;
+}
+.searchInput::placeholder {
+  color: lightgray;
+}
+.Limitedoffer {
+  font-size: 20px;
+  border-bottom: 2px solid green;
+}
+.navBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-btn-success {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover,
+.btn-logout:hover {
+  background-color: #333;
+}
+
+.menuitem {
+  margin-right: 50px;
+  cursor: pointer;
+  color: lightgrey;
+}
+.slider {
+  background: url("https://media.istockphoto.com/id/915097804/photo/black-brick-wall-background-texture-dark-masonry.jpg?s=2048x2048&w=is&k=20&c=5FmRfiP3Qqwgw-7TdQveR4fTSd27_hr-msXkA8F4KZw=");
+}
+
+.sliderWrapper {
+  display: flex;
+  width: 500vw;
+}
+
+.sliderItem {
+  margin-left: 65px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.sliderbg {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  position: absolute;
+}
+.slidertitle {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  z-index: -10;
+}
+.sliderImg {
+  z-index: 1;
+}
+.sliderprice {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  border: 1px solid gray;
+  z-index: 1;
+}
+.buyButton {
+  position: absolute;
+  top: 58%;
+  right: -1%;
+  font-size: 49px;
+  font-weight: 900;
+  color: white;
+  border: 1px solid gray;
+  z-index: 1;
+  cursor: pointer;
+  background-color: black;
+}
+
+.buyButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.sliderItem:nth-child(1) .sliderbg {
+  background-color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderbg {
+  background-color: rebeccapurple;
+}
+.sliderItem:nth-child(3) .sliderbg {
+  background-color: teal;
+}
+.sliderItem:nth-child(4) .sliderbg {
+  background-color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderbg {
+  background-color: yellow;
+}
+
+.sliderItem:nth-child(1) .sliderprice {
+  background-color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderprice {
+  background-color: rebeccapurple;
+}
+.sliderItem:nth-child(3) .sliderprice {
+  background-color: teal;
+}
+.sliderItem:nth-child(4) .sliderprice {
+  background-color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderprice {
+  background-color: yellow;
+}

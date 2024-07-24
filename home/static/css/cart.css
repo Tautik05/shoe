@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+table thead th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody th,
+table tbody td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+table tbody th {
+  font-weight: normal;
+  background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}
