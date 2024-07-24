@@ -17,6 +17,7 @@ class Shoes(models.Model):
 
 
 class CartItem(models.Model):
+    # user = models.ForeignKey(Consumer,on_delete=models.SET_NULL, null=True , blank=True)
     shoe = models.ForeignKey(Shoes, related_name='items',on_delete=models.CASCADE)
     quantity=models.IntegerField(default=0,null=True,blank=True)
     complete=models.IntegerField(default=False,null=True,blank=False)
