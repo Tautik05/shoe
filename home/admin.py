@@ -7,6 +7,7 @@ from .models import *
 
 admin.site.register(Consumer)
 admin.site.register(Shoes)
+admin.site.register(CartItem)
 
 
 

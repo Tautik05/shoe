@@ -99,8 +99,10 @@ def login_page(request):
         
         user = consumer.user  
         if user is not None and user.check_password(password):
+            request.session["consumer_id"]=consumer.id
             login(request, user)
             messages.success(request, 'Login successful!')
+
             return redirect('shoe')
         else:
             messages.error(request, 'Invalid credentials. Please try again.')
@@ -112,14 +114,9 @@ def login_page(request):
 
 
 
-
-
-
-
 def logout_page(request):
+   if 'consumer_id' in request.session:
+       del request.session['consumer_id']
    logout(request)
    return redirect('shoe')
-
-
-
 

@@ -26,14 +26,16 @@
         <div class="ProductColor">
           <div class="color"></div>
           <div class="color"></div>
-          <!-- <div class="color"></div> -->
         </div>
         <div class="productSize">
           <div class="size">42</div>
           <div class="size">43</div>
           <div class="size">44</div>
         </div>
-        <button class="productButton"><a href="/cart/">Add to Cart!</a></button>
+        <button class="productButton">
+          <a href="{% url 'add_to_cart' sneaker.id %}">Add to Cart!</a>
+        </button>
+
         <div class="counter">
           <button class="decrement">-</button>
           <span class="count">0</span>

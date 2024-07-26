@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart page</title>
     {% load static %}
+    {% load custom_filters %}
+
     <link rel="stylesheet" href="{% static 'css/cart.css' %}" />
   </head>
   <body>
@@ -24,16 +26,19 @@
           </tr>
         </thead>
         <tbody>
+          {{ cart|json_script:"cart-data" }} 
+          {% for item in cart %}
           <tr>
-            <th scope="row"></th>
-            <td></td>
-            <td></td>
+            <th scope="row">{{ forloop.counter }}</th>
             <td>
-              <img src="" style="height: 200px" />
+              <img src="{{ item.shoe_image }}" style="height: 200px" />
             </td>
-            <td></td>
-            <td></td>
-          </tr>     
+            <td>{{ item.shoe_name }}</td>
+            <td>{{ item.shoe_price }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.shoe_price|mul:item.quantity }}</td>
+          </tr>  
+          {% endfor %}   
        </tbody>
       </table>
     </div>

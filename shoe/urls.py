@@ -28,8 +28,10 @@ urlpatterns = [
     path('register/', register_page, name='register_page'),
     path('login/', login_page, name='login_page'),
     path('logout/', logout_page, name='logout_page'),
-    # path('cart/', cart_page, name='cart_page'),
     path('admin/', admin.site.urls),
+    path('add_to_cart/<int:shoe_id>/', add_to_cart, name='add_to_cart'),
+     path('cart/', view_cart, name='view_cart'), 
+
 ]
 
 
@@ -40,3 +42,5 @@ if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # urlpatterns += staticfiles_urlpatterns()    
+
+
